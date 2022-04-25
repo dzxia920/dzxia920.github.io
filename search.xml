@@ -1,74 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>这是我的第一篇博客</title>
-    <url>/2022/04/14/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>这篇博客记录了各种测试的语法。包括引用其他文章、Youtube视频等。</p>
-<span id="more"></span>
-
-<h2 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h2><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
-<p>效果：</p>
-<p><img src="/images/more%E6%A0%87%E7%AD%BE.png"></p>
-<h2 id="内容标签插件"><a href="#内容标签插件" class="headerlink" title="内容标签插件"></a>内容标签插件</h2><p>Typora里自带的链接引用在Hexo中无法渲染出来，因此需要用Hexo的内容标签插件，其永远是可用的。</p>
-<h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>总的语法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="示例1，引用书中的格言："><a href="#示例1，引用书中的格言：" class="headerlink" title="示例1，引用书中的格言："></a>示例1，引用书中的格言：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 诸葛亮, 诫子书 %&#125;</span><br><span class="line">非淡泊无以明志，非宁静无以致远。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote><p>非淡泊无以明志，非宁静无以致远。</p>
-<footer><strong>诸葛亮</strong><cite>诫子书</cite></footer></blockquote>
-
-<h4 id="示例2，引用网上其他文章："><a href="#示例2，引用网上其他文章：" class="headerlink" title="示例2，引用网上其他文章："></a>示例2，引用网上其他文章：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 枫叶, 知乎 https://zhuanlan.zhihu.com/p/102592286 从0开始搭建个人博客 %&#125;</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote><footer><strong>枫叶, 知乎</strong><cite><a href="https://zhuanlan.zhihu.com/p/102592286">从0开始搭建个人博客</a></cite></footer></blockquote>
-
-
-
-<h3 id="引用Youtube视频"><a href="#引用Youtube视频" class="headerlink" title="引用Youtube视频"></a>引用Youtube视频</h3><p>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br><span class="line">&#123;% youtube ecAZThYr6Xo %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ecAZThYr6Xo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>代码块可以正常用Markdown的反引号&#96;&#96;&#96;：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line">clc;</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><blockquote><footer><strong>Hexo-io</strong><cite><a href="https://hexo.io/zh-cn/docs/tag-plugins#">Hexo标签插件</a></cite></footer></blockquote>
-<blockquote><footer><strong>YanYinhong</strong><cite><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/">Hexo博客搭建之在文章中插入图片</a></cite></footer></blockquote>
-
-<p>xiadazhou.xyz</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/04/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>基于Hexo的个人博客写作流程</title>
     <url>/2022/04/25/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="新建MarkDown文件"><a href="#新建MarkDown文件" class="headerlink" title="新建MarkDown文件"></a>新建MarkDown文件</h1><p>转至Hexo所在的个人博客文件夹，用cmd打开，输入命令：</p>
+    <content><![CDATA[<p>本文介绍了配置好Hexo后，博客写作到发布的全流程。包括：如何基于Hexo新建博客，Hexo写作的一些语法、预览和发布到网页。</p>
+<span id="more"></span>
+
+<h2 id="新建MarkDown文件"><a href="#新建MarkDown文件" class="headerlink" title="新建MarkDown文件"></a>新建MarkDown文件</h2><p>转至Hexo所在的个人博客文件夹，用cmd打开，输入命令：</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>例如<code>hexo new post 文章名.md</code>，这样在你的<code>source\_post</code>目录下就会生成<code>文章名.md</code>这样一个MarkDown文件，你就可以在上面修改写文章了。也有人说可以直接把新建的md文件拷贝到<code>source\_post</code>目录下，效果是一样的。</p>
-<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><p>Hexo 有三种默认布局，分别是<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
+<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>Hexo 有三种默认布局，分别是<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
 <table>
 <thead>
 <tr>
@@ -89,8 +31,8 @@
 <td align="left"><code>source/_drafts</code></td>
 </tr>
 </tbody></table>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><p>创建好md文件后，就可以开始写作了。</p>
-<h2 id="文件头"><a href="#文件头" class="headerlink" title="文件头"></a>文件头</h2><p>利用上述命令创建的md文件会有一个文件头，叫做Front-matter。如下图所示：</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>创建好md文件后，就可以开始写作了。</p>
+<h3 id="文件头"><a href="#文件头" class="headerlink" title="文件头"></a>文件头</h3><p>利用上述命令创建的md文件会有一个文件头，叫做Front-matter。如下图所示：</p>
 <p><img src="/images/hexo-front-matter-demo.png"></p>
 <p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -160,39 +102,76 @@
 <td align="left">Inherited from <code>_config.yml</code></td>
 </tr>
 </tbody></table>
-<h2 id="写作的语法"><a href="#写作的语法" class="headerlink" title="写作的语法"></a>写作的语法</h2><p>支持MarkDown最原始的语法，正常写就行了。除此之外，有一些特殊的格式，比如引用。</p>
-<h1 id="预览与发布"><a href="#预览与发布" class="headerlink" title="预览与发布"></a>预览与发布</h1><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>写好了博客之后，可以先预览一下效果。预览其实就是启动本地服务器看看渲染的效果，命令如下：</p>
+<h3 id="写作的语法"><a href="#写作的语法" class="headerlink" title="写作的语法"></a>写作的语法</h3><p>支持MarkDown最原始的语法，正常写就行了。除此之外，有一些特殊的格式，比如引用。</p>
+<h4 id="文章摘要"><a href="#文章摘要" class="headerlink" title="文章摘要"></a>文章摘要</h4><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
+<p>效果：<br><img src="/images/more%E6%A0%87%E7%AD%BE.png"></p>
+<h4 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h4><p>把图片放到<code>/source/images</code>文件夹下，然后可以通过<code>![](images/picture.png)</code>来引用图片。</p>
+<h4 id="内容标签插件"><a href="#内容标签插件" class="headerlink" title="内容标签插件"></a>内容标签插件</h4><p>Typora里自带的链接引用在Hexo中无法渲染出来，因此需要用Hexo的内容标签插件，其永远是可用的。</p>
+<ul>
+<li><h5 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h5></li>
+</ul>
+<p>总的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="示例1，引用书中的格言："><a href="#示例1，引用书中的格言：" class="headerlink" title="示例1，引用书中的格言："></a>示例1，引用书中的格言：</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 诸葛亮, 诫子书 %&#125;</span><br><span class="line">非淡泊无以明志，非宁静无以致远。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><p>非淡泊无以明志，非宁静无以致远。</p>
+<footer><strong>诸葛亮</strong><cite>诫子书</cite></footer></blockquote>
+
+<h6 id="示例2，引用网上其他文章："><a href="#示例2，引用网上其他文章：" class="headerlink" title="示例2，引用网上其他文章："></a>示例2，引用网上其他文章：</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 枫叶, 知乎 https://zhuanlan.zhihu.com/p/102592286 从0开始搭建个人博客 %&#125;</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><footer><strong>枫叶, 知乎</strong><cite><a href="https://zhuanlan.zhihu.com/p/102592286">从0开始搭建个人博客</a></cite></footer></blockquote>
+
+<ul>
+<li><h5 id="引用Youtube视频"><a href="#引用Youtube视频" class="headerlink" title="引用Youtube视频"></a>引用Youtube视频</h5></li>
+</ul>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>代码块可以正常用Markdown的反引号&#96;&#96;&#96;：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line">clc;</span><br></pre></td></tr></table></figure>
+
+<h2 id="预览与发布"><a href="#预览与发布" class="headerlink" title="预览与发布"></a>预览与发布</h2><h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>写好了博客之后，可以先预览一下效果。预览其实就是启动本地服务器看看渲染的效果，命令如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server </span><br></pre></td></tr></table></figure>
 
 <p>其作用是启动服务器。该命令的简写是<code>$ hexo s</code>。默认情况下，可通过浏览器访问网址 <code>http://localhost:4000/</code>来预览你的博客。可用<code>Ctrl+C</code>停止连接。</p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>觉得预览没问题了，就可以真正发布到网站上。</p>
-<p>发布的流程也很简单，</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>觉得预览没问题了，就可以真正发布到网站上。</p>
+<p>发布的流程也很简单，<strong>生成</strong>和<strong>部署</strong>两步即可：</p>
 <ol>
-<li>生成静态文件：</li>
+<li>生成静态文件：可以简写为：<code>$ hexo g</code>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>可以简写为：<code>$ hexo g</code>。</p>
+
 <ol start="2">
-<li>部署到网站上：</li>
+<li>部署到网站上：可以简写为<code>$ hexo d </code>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>可以简写为<code>$ hexo d </code>。</p>
+<hr>
 <p>当然以上两条命令都是可以加参数的。比如：</p>
 <p><code>$ hexo d -g</code>：部署之前预先生成静态文件；</p>
 <p><code>$ hexo g -d</code>:   生成静态文件后马上部署。</p>
 <p>这意味这我们不需要敲两条命令，只需要用上述加参数的命令中的任意一个即可发布出去。</p>
+<hr>
 <p>另外还有一个<code>clean</code>命令很常用：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 
-<p>作用是：清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
-<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><ol>
+<p>作用是：清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="https://hexo.io/zh-cn/docs/writing.html">Hexo官方文档</a></li>
-<li></li>
+<li><a href="https://zenreal.github.io/posts/51388/">https://zenreal.github.io/posts/51388/</a></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>教程</category>
+        <category>博客写作</category>
+      </categories>
       <tags>
         <tag>Blog Writing</tag>
       </tags>

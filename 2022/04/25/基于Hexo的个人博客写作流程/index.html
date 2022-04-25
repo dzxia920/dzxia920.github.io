@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 6.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/x-32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/x-16.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -20,16 +20,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="新建MarkDown文件转至Hexo所在的个人博客文件夹，用cmd打开，输入命令： 1hexo new [layout] &lt;title&gt;  例如hexo new post 文章名.md，这样在你的source\_post目录下就会生成文章名.md这样一个MarkDown文件，你就可以在上面修改写文章了。也有人说可以直接把新建的md文件拷贝到source\_post目录下，效果是一样的。">
+  <meta name="description" content="本文介绍了配置好Hexo后，博客写作到发布的全流程。包括：如何基于Hexo新建博客，Hexo写作的一些语法、预览和发布到网页。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Hexo的个人博客写作流程">
 <meta property="og:url" content="http://example.com/2022/04/25/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="BigZ&#39;s Blog">
-<meta property="og:description" content="新建MarkDown文件转至Hexo所在的个人博客文件夹，用cmd打开，输入命令： 1hexo new [layout] &lt;title&gt;  例如hexo new post 文章名.md，这样在你的source\_post目录下就会生成文章名.md这样一个MarkDown文件，你就可以在上面修改写文章了。也有人说可以直接把新建的md文件拷贝到source\_post目录下，效果是一样的。">
+<meta property="og:description" content="本文介绍了配置好Hexo后，博客写作到发布的全流程。包括：如何基于Hexo新建博客，Hexo写作的一些语法、预览和发布到网页。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/hexo-front-matter-demo.png">
+<meta property="og:image" content="http://example.com/images/more%E6%A0%87%E7%AD%BE.png">
 <meta property="article:published_time" content="2022-04-25T09:16:23.000Z">
-<meta property="article:modified_time" content="2022-04-25T09:55:01.203Z">
+<meta property="article:modified_time" content="2022-04-25T11:58:20.837Z">
 <meta property="article:author" content="BigZ">
 <meta property="article:tag" content="Blog Writing">
 <meta name="twitter:card" content="summary">
@@ -141,11 +142,6 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-        <li class="menu-item menu-item-schedule">
-
-    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
-
-  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -204,7 +200,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/25/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/%E5%B0%8F%E7%8C%AA.png">
       <meta itemprop="name" content="BigZ">
       <meta itemprop="description" content="淡泊明志，宁静致远">
     </span>
@@ -225,7 +221,20 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-25 17:16:23 / 修改时间：17:55:01" itemprop="dateCreated datePublished" datetime="2022-04-25T17:16:23+08:00">2022-04-25</time>
+              <time title="创建时间：2022-04-25 17:16:23 / 修改时间：19:58:20" itemprop="dateCreated datePublished" datetime="2022-04-25T17:16:23+08:00">2022-04-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">博客写作</span></a>
+                </span>
             </span>
 
           <br>
@@ -234,14 +243,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -253,11 +262,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="新建MarkDown文件"><a href="#新建MarkDown文件" class="headerlink" title="新建MarkDown文件"></a>新建MarkDown文件</h1><p>转至Hexo所在的个人博客文件夹，用cmd打开，输入命令：</p>
+        <p>本文介绍了配置好Hexo后，博客写作到发布的全流程。包括：如何基于Hexo新建博客，Hexo写作的一些语法、预览和发布到网页。</p>
+<span id="more"></span>
+
+<h2 id="新建MarkDown文件"><a href="#新建MarkDown文件" class="headerlink" title="新建MarkDown文件"></a>新建MarkDown文件</h2><p>转至Hexo所在的个人博客文件夹，用cmd打开，输入命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>例如<code>hexo new post 文章名.md</code>，这样在你的<code>source\_post</code>目录下就会生成<code>文章名.md</code>这样一个MarkDown文件，你就可以在上面修改写文章了。也有人说可以直接把新建的md文件拷贝到<code>source\_post</code>目录下，效果是一样的。</p>
-<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><p>Hexo 有三种默认布局，分别是<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
+<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>Hexo 有三种默认布局，分别是<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
 <table>
 <thead>
 <tr>
@@ -278,8 +290,8 @@
 <td align="left"><code>source/_drafts</code></td>
 </tr>
 </tbody></table>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><p>创建好md文件后，就可以开始写作了。</p>
-<h2 id="文件头"><a href="#文件头" class="headerlink" title="文件头"></a>文件头</h2><p>利用上述命令创建的md文件会有一个文件头，叫做Front-matter。如下图所示：</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>创建好md文件后，就可以开始写作了。</p>
+<h3 id="文件头"><a href="#文件头" class="headerlink" title="文件头"></a>文件头</h3><p>利用上述命令创建的md文件会有一个文件头，叫做Front-matter。如下图所示：</p>
 <p><img src="/images/hexo-front-matter-demo.png"></p>
 <p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -349,37 +361,70 @@
 <td align="left">Inherited from <code>_config.yml</code></td>
 </tr>
 </tbody></table>
-<h2 id="写作的语法"><a href="#写作的语法" class="headerlink" title="写作的语法"></a>写作的语法</h2><p>支持MarkDown最原始的语法，正常写就行了。除此之外，有一些特殊的格式，比如引用。</p>
-<h1 id="预览与发布"><a href="#预览与发布" class="headerlink" title="预览与发布"></a>预览与发布</h1><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>写好了博客之后，可以先预览一下效果。预览其实就是启动本地服务器看看渲染的效果，命令如下：</p>
+<h3 id="写作的语法"><a href="#写作的语法" class="headerlink" title="写作的语法"></a>写作的语法</h3><p>支持MarkDown最原始的语法，正常写就行了。除此之外，有一些特殊的格式，比如引用。</p>
+<h4 id="文章摘要"><a href="#文章摘要" class="headerlink" title="文章摘要"></a>文章摘要</h4><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
+<p>效果：<br><img src="/images/more%E6%A0%87%E7%AD%BE.png"></p>
+<h4 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h4><p>把图片放到<code>/source/images</code>文件夹下，然后可以通过<code>![](images/picture.png)</code>来引用图片。</p>
+<h4 id="内容标签插件"><a href="#内容标签插件" class="headerlink" title="内容标签插件"></a>内容标签插件</h4><p>Typora里自带的链接引用在Hexo中无法渲染出来，因此需要用Hexo的内容标签插件，其永远是可用的。</p>
+<ul>
+<li><h5 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h5></li>
+</ul>
+<p>总的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="示例1，引用书中的格言："><a href="#示例1，引用书中的格言：" class="headerlink" title="示例1，引用书中的格言："></a>示例1，引用书中的格言：</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 诸葛亮, 诫子书 %&#125;</span><br><span class="line">非淡泊无以明志，非宁静无以致远。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><p>非淡泊无以明志，非宁静无以致远。</p>
+<footer><strong>诸葛亮</strong><cite>诫子书</cite></footer></blockquote>
+
+<h6 id="示例2，引用网上其他文章："><a href="#示例2，引用网上其他文章：" class="headerlink" title="示例2，引用网上其他文章："></a>示例2，引用网上其他文章：</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 枫叶, 知乎 https://zhuanlan.zhihu.com/p/102592286 从0开始搭建个人博客 %&#125;</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><footer><strong>枫叶, 知乎</strong><cite><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从0开始搭建个人博客</a></cite></footer></blockquote>
+
+<ul>
+<li><h5 id="引用Youtube视频"><a href="#引用Youtube视频" class="headerlink" title="引用Youtube视频"></a>引用Youtube视频</h5></li>
+</ul>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>代码块可以正常用Markdown的反引号&#96;&#96;&#96;：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">close all;</span><br><span class="line">clc;</span><br></pre></td></tr></table></figure>
+
+<h2 id="预览与发布"><a href="#预览与发布" class="headerlink" title="预览与发布"></a>预览与发布</h2><h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>写好了博客之后，可以先预览一下效果。预览其实就是启动本地服务器看看渲染的效果，命令如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server </span><br></pre></td></tr></table></figure>
 
 <p>其作用是启动服务器。该命令的简写是<code>$ hexo s</code>。默认情况下，可通过浏览器访问网址 <code>http://localhost:4000/</code>来预览你的博客。可用<code>Ctrl+C</code>停止连接。</p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>觉得预览没问题了，就可以真正发布到网站上。</p>
-<p>发布的流程也很简单，</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>觉得预览没问题了，就可以真正发布到网站上。</p>
+<p>发布的流程也很简单，<strong>生成</strong>和<strong>部署</strong>两步即可：</p>
 <ol>
-<li>生成静态文件：</li>
+<li>生成静态文件：可以简写为：<code>$ hexo g</code>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>可以简写为：<code>$ hexo g</code>。</p>
+
 <ol start="2">
-<li>部署到网站上：</li>
+<li>部署到网站上：可以简写为<code>$ hexo d </code>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>可以简写为<code>$ hexo d </code>。</p>
+<hr>
 <p>当然以上两条命令都是可以加参数的。比如：</p>
 <p><code>$ hexo d -g</code>：部署之前预先生成静态文件；</p>
 <p><code>$ hexo g -d</code>:   生成静态文件后马上部署。</p>
 <p>这意味这我们不需要敲两条命令，只需要用上述加参数的命令中的任意一个即可发布出去。</p>
+<hr>
 <p>另外还有一个<code>clean</code>命令很常用：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 
-<p>作用是：清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
-<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><ol>
+<p>作用是：清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，可能需要运行该命令。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing.html">Hexo官方文档</a></li>
-<li></li>
+<li><a target="_blank" rel="noopener" href="https://zenreal.github.io/posts/51388/">https://zenreal.github.io/posts/51388/</a></li>
 </ol>
 
     </div>
@@ -397,13 +442,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2022/04/14/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="prev" title="这是我的第一篇博客">
-      <i class="fa fa-chevron-left"></i> 这是我的第一篇博客
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
       </footer>
     
   </article>
@@ -461,12 +499,14 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAMarkDown%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">新建MarkDown文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Layout"><span class="nav-number">1.1.</span> <span class="nav-text">Layout</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">写作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B4"><span class="nav-number">2.1.</span> <span class="nav-text">文件头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BD%9C%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">写作的语法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E8%A7%88%E4%B8%8E%E5%8F%91%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">预览与发布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">3.1.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAMarkDown%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">新建MarkDown文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Layout"><span class="nav-number">1.1.</span> <span class="nav-text">Layout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B4"><span class="nav-number">2.1.</span> <span class="nav-text">文件头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E4%BD%9C%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">写作的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81"><span class="nav-number">2.2.1.</span> <span class="nav-text">文章摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="nav-number">2.2.2.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6"><span class="nav-number">2.2.3.</span> <span class="nav-text">内容标签插件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">引用块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B1%EF%BC%8C%E5%BC%95%E7%94%A8%E4%B9%A6%E4%B8%AD%E7%9A%84%E6%A0%BC%E8%A8%80%EF%BC%9A"><span class="nav-number">2.2.3.1.1.</span> <span class="nav-text">示例1，引用书中的格言：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B2%EF%BC%8C%E5%BC%95%E7%94%A8%E7%BD%91%E4%B8%8A%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0%EF%BC%9A"><span class="nav-number">2.2.3.1.2.</span> <span class="nav-text">示例2，引用网上其他文章：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%95%E7%94%A8Youtube%E8%A7%86%E9%A2%91"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">引用Youtube视频</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">2.2.4.</span> <span class="nav-text">代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E8%A7%88%E4%B8%8E%E5%8F%91%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">预览与发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">3.1.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">发布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BigZ"
+      src="/images/%E5%B0%8F%E7%8C%AA.png">
   <p class="site-author-name" itemprop="name">BigZ</p>
   <div class="site-description" itemprop="description">淡泊明志，宁静致远</div>
 </div>
@@ -475,9 +515,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
@@ -487,6 +533,11 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/dzxia920@gmail.com" title="E-Mail → dzxia920@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -518,12 +569,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">4 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
