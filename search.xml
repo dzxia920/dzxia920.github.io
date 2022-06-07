@@ -5,6 +5,7 @@
     <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
     <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">set(gcf, <span class="string">&quot;Position&quot;</span>, get(<span class="number">0</span>,<span class="string">&#x27;ScreenSize&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 
 <p>此时保存的图像也是放大后的。如：</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">saveas(gcf, <span class="string">&#x27;TrajPics.tiff&#x27;</span>);</span><br></pre></td></tr></table></figure>
@@ -16,22 +17,6 @@
       </categories>
       <tags>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>专业问题记录</title>
-    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
-<span id="more"></span>
-
-<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-        <category>Navigation</category>
-      </categories>
-      <tags>
-        <tag>Navigation</tag>
       </tags>
   </entry>
   <entry>
@@ -208,6 +193,22 @@
       </categories>
       <tags>
         <tag>Blog Writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>专业问题记录</title>
+    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
+<span id="more"></span>
+
+<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>Navigation</category>
+      </categories>
+      <tags>
+        <tag>Navigation</tag>
       </tags>
   </entry>
 </search>
