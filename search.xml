@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java核心技术卷1-Chap1-Java程序设计概述</title>
+    <url>/2022/06/12/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap1-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<p>本文是Java核心技术卷1-第一章-Java程序设计概述的读书笔记。</p>
+<span id="more"></span>
+
+<h2 id="1-1-Java程序设计平台"><a href="#1-1-Java程序设计平台" class="headerlink" title="1.1 Java程序设计平台"></a>1.1 Java程序设计平台</h2><p>Java是功能齐全的出色语言，是一个高质量的执行环境，还提供了一个庞大的库。因此Java是一个完整的平台。</p>
+<h2 id="1-2-Java“白皮书”关键术语"><a href="#1-2-Java“白皮书”关键术语" class="headerlink" title="1.2 Java“白皮书”关键术语"></a>1.2 Java“白皮书”关键术语</h2><ol>
+<li><strong>简单性</strong>。Java语法是C++语法的纯净版本，没有头文件、指针运算、结构、联合、操作符重载、虚基类等。设计Java时使其尽可能接近C++，但是剔除了许多很少使用、难以理解、容易混淆的特性。</li>
+<li><strong>面向对象</strong>。多重继承Java中采取的是更简单的接口。此外，提供了更丰富的运行时自省功能。</li>
+<li><strong>分布式</strong>。Java有一个丰富的例程库，用于处理像HTTP和FTP之类的TCP&#x2F;IP协议。</li>
+<li><strong>健壮性</strong>。Java采用的指针模型可以消除重写内存和损坏数据的可能性。</li>
+<li><strong>安全性</strong>。Java可以构建防病毒、防篡改的系统。</li>
+<li><strong>体系结构中立</strong>。编译器会生成一个目标文件格式，此格式与平台无关，只要有Java运行时系统就可以解释执行，此字节码还可以转成本地机器代码。</li>
+<li><strong>可移植性</strong>。Java基本数据类型的大小和有关运算的行为都有明确的说明，比如int永远是32位。在Java中，数值类型有固定的字节数，二进制数据以固定的格式进行存储和传输（消除了字节顺序的困扰），字符串则采用标准的Unicode格式存储。</li>
+<li><strong>解释型</strong>。Java解释器可以在任何移植了解释器的机器上执行Java字节码。</li>
+<li><strong>高性能</strong>。解释后的字节码性能还不错。即时编译器也会优化代码。</li>
+<li><strong>多线程</strong>。Java可以很好的管理并发程序设计。</li>
+<li><strong>动态性</strong>。动态语言？不太理解。</li>
+</ol>
+<h2 id="1-3-Java-applet与Internet"><a href="#1-3-Java-applet与Internet" class="headerlink" title="1.3 Java applet与Internet"></a>1.3 Java applet与Internet</h2><p>Java applet的想法是：用户从Internet上下载Java字节码，并在自己的机器上运行。在网页中运行的Java程序称为applet。要使用applet，只需要一个启动了Java的web浏览器，它来执行字节码，不需要安装任何软件。但是这种想法因为版本不同、浏览器限制、安全问题等泡汤了。</p>
+<h2 id="1-4-发展简史"><a href="#1-4-发展简史" class="headerlink" title="1.4 发展简史"></a>1.4 发展简史</h2><p>创始人是Sun公司的<strong>Patrick Naughton</strong>和<strong>James Gosling</strong>。</p>
+<p>Java语言的演进：</p>
+<p>目前用的最多的是Java8，2017年发布了Java9.</p>
+<p>参考这篇文章</p>
+<p><a href="https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf">https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf</a></p>
+<h2 id="1-5-关于Java常见的误解和解释"><a href="#1-5-关于Java常见的误解和解释" class="headerlink" title="1.5 关于Java常见的误解和解释"></a>1.5 关于Java常见的误解和解释</h2><p>误解：Java是解释型型的，因此对于关键的应用程序速度太慢了。</p>
+<p>解释：早期Java是解释型的，现在Java虚拟机使用了即时编译器。因此采用Java编写的<strong>热点代码</strong>（对于程序来说，通常只有一部分代码会被经常执行，而应用的性能主要取决于这些代码执行得有多快。这些关键代码段被称为应用的热点代码）速度和C++相差无几，甚至更快。</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>Coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java核心技术卷1-Chap3-Java程序设计基本结构</title>
+    <url>/2022/06/12/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap3-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<p>本文是Java核心技术卷1-第3章-Java程序设计基本结构的读书笔记。</p>
+<span id="more"></span>
+
+<h2 id="3-1-一个简单的Java应用程序"><a href="#3-1-一个简单的Java应用程序" class="headerlink" title="3.1 一个简单的Java应用程序"></a>3.1 一个简单的Java应用程序</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FirstSample</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;We will not use &#x27;Hello World&#x27;!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是一段最简单的Java程序，有一些值得注意的地方：</p>
+<ul>
+<li>Java区分大小写</li>
+<li>Java程序的所有内容都要包含在<code>class</code>中</li>
+<li>关键字<code>class</code>后紧跟着类名，标准的类名命名规范为<strong>驼峰命名法</strong></li>
+<li><strong>源代码的文件名</strong>必须与<strong>公共类的类名</strong>相同（需<strong>完全一致</strong>，case-sensitive），并使用<code>.java</code>作为拓展名。</li>
+<li>运行已编译的程序时，Java虚拟机</li>
+</ul>
+<h2 id="3-2-注释"><a href="#3-2-注释" class="headerlink" title="3.2 注释"></a>3.2 注释</h2><p>Java中的注释有三种：</p>
+<ul>
+<li>使用<code>//</code>，注释范围到行尾；</li>
+<li>使用<code>/*</code>和<code>*/</code>来界定注释；</li>
+<li>以<code>/**</code>开始，以<code>*/</code>结束，这种注释方法可用来自动生成文档。</li>
+</ul>
+<p><strong>警告：</strong>Java中<code>/*</code>和<code>*/</code>不能嵌套，也就是说不能直接将代码用<code>/*</code>和<code>*/</code>括起来注释，因为中间可能还会碰到<code>*/</code>界定符。</p>
+<h3 id="3-3-数据类型"><a href="#3-3-数据类型" class="headerlink" title="3.3 数据类型"></a>3.3 数据类型</h3><h2 id="3-10-数组"><a href="#3-10-数组" class="headerlink" title="3.10 数组"></a>3.10 数组</h2><p>Java中的数组声明如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] a; <span class="comment">// 数组的声明</span></span><br><span class="line"><span class="type">int</span>[] a = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">100</span>]; <span class="comment">// 声明并初始化可存储100个整数的数组</span></span><br><span class="line"><span class="type">var</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">    System.out.println(a[i]);</span><br><span class="line">    a[i] = i;</span><br><span class="line">    System.out.println(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Java中的</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>Coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MATLAB绘图窗口最大化</title>
     <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
     <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
@@ -12,11 +89,117 @@
 
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>Coding</category>
         <category>MATLAB</category>
       </categories>
       <tags>
         <tag>MATLAB</tag>
+        <tag>小技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>专业问题记录</title>
+    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
+<span id="more"></span>
+
+<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>Navigation</category>
+      </categories>
+      <tags>
+        <tag>Navigation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java核心技术卷1-Chap2-Java程序设计环境</title>
+    <url>/2022/06/14/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap2-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<p>本文是Java核心技术卷1-第二章-Java程序设计环境的读书笔记。</p>
+<span id="more"></span>
+
+<h2 id="2-1-安装Java开发工具包"><a href="#2-1-安装Java开发工具包" class="headerlink" title="2.1 安装Java开发工具包"></a>2.1 安装Java开发工具包</h2><p>首先有必要弄清下列专业术语：</p>
+<table>
+<thead>
+<tr>
+<th align="center">缩写</th>
+<th align="center">术语</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">JDK</td>
+<td align="center">Java Development Kit（Java开发工具包）</td>
+<td align="center">编写Java程序所需的软件</td>
+</tr>
+<tr>
+<td align="center">JRE</td>
+<td align="center">Java Runtime Environment（Java 运行时环境）</td>
+<td align="center">运行Java程序所需的软件</td>
+</tr>
+<tr>
+<td align="center">JVM</td>
+<td align="center">Java Virtual Machine（Java虚拟机）</td>
+<td align="center">整个 Java 实现跨平台的最核心的部分</td>
+</tr>
+<tr>
+<td align="center">SE</td>
+<td align="center">Standard Edition（标准版）</td>
+<td align="center">用于桌面或简单服务器应用的Java平台</td>
+</tr>
+<tr>
+<td align="center">EE</td>
+<td align="center">Enterprise Edition（企业版）</td>
+<td align="center">用于复杂服务器应用的Java平台</td>
+</tr>
+<tr>
+<td align="center">ME</td>
+<td align="center">Micro Edition（微型版）</td>
+<td align="center">用于小型设备的Java平台</td>
+</tr>
+<tr>
+<td align="center">OpenJDK</td>
+<td align="center">-</td>
+<td align="center">JavaSE的一个免费开源实现</td>
+</tr>
+<tr>
+<td align="center">J2</td>
+<td align="center">Java2</td>
+<td align="center">用于描述1998-2006年之间的Java版本</td>
+</tr>
+<tr>
+<td align="center">SDK</td>
+<td align="center">Software Development Kit（软件开发工具包）</td>
+<td align="center">用于描述1998-2006年之间的JDK</td>
+</tr>
+</tbody></table>
+<p>Java语言的版本演进是1.0、1.1、1.2、1.3、1.4、5.0、6、7、8、9等。为了反映版本1.2的重大改进，版本1.2—版本1.4被命名为Java2。而且JDK1.2—JDK1.4被称为Java SDK。2006年版本号得到简化，于是标准版就有了Java SE6、Java SE7、JavaSE8.</p>
+<p>在Java9之前，JDK有32位和64位两种，但是现在只有64位的。</p>
+<p>JavaSE版本与JDK版本的对应关系是：</p>
+<p><img src="/images/Java%E7%89%88%E6%9C%AC%E5%92%8CJDK%E7%89%88%E6%9C%AC%E7%9A%84%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png"></p>
+<p>参考：<a href="https://blog.csdn.net/MinggeQingchun/article/details/120578602">https://blog.csdn.net/MinggeQingchun/article/details/120578602</a></p>
+<p>安装并配置完JDK后，输入<code>javac --version</code>可检查是否配置正确。这里的<code>javac</code>是Java语言编译器，即<code>Java Compiler</code>.</p>
+<p><strong>JDK、JRE、JVM的关系是：</strong></p>
+<p>JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。<br>JDK是java开发工具包，基本上每个学java的人都会先在机器 上装一个JDK，那他都包含哪几部分呢？在目录下面有 六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的 是以下四个文件夹：bin、include、lib、 jre。有这样一个关系，JDK包含JRE，而JRE包 含JVM。<br>这篇博客讲的很清楚：<a href="https://blog.csdn.net/ancientear/article/details/79483592">https://blog.csdn.net/ancientear/article/details/79483592</a></p>
+<p><img src="/images/jdk-jre-jvm%E5%85%B3%E7%B3%BB.jpg"></p>
+<h2 id="2-2-使用命令行工具"><a href="#2-2-使用命令行工具" class="headerlink" title="2.2 使用命令行工具"></a>2.2 使用命令行工具</h2><p>使用文本编辑器编写一个后缀为.java的文件，然后键入如下命令：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">javac Welcome.java</span><br><span class="line">java Welcome</span><br></pre></td></tr></table></figure>
+
+<p>第一条命令会调用<strong>Java编译器</strong>生成对应的字节码（.class文件），需要指定文件名；</p>
+<p>第二条命令会<strong>运行程序</strong>，只需要指定类名。</p>
+<h2 id="2-3-使用集成开发环境"><a href="#2-3-使用集成开发环境" class="headerlink" title="2.3 使用集成开发环境"></a>2.3 使用集成开发环境</h2><p>书上用的是Eclipse，目前自己用的是IDEA的Educational Edition</p>
+<h2 id="2-4-JShell"><a href="#2-4-JShell" class="headerlink" title="2.4 JShell"></a>2.4 JShell</h2><p>可能自己的JDK用的是Android时装的那份（OpenJDK11），JShell打开不了。</p>
+<p><strong>小结：</strong>感觉这一节主要是熟悉Java中的一些术语，如JDK、JRE、Java SE，了解各个版本的对应关系。以及配置JDK，使用命令行工具。</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>Coding</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -193,22 +376,6 @@
       </categories>
       <tags>
         <tag>Blog Writing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>专业问题记录</title>
-    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
-<span id="more"></span>
-
-<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-        <category>Navigation</category>
-      </categories>
-      <tags>
-        <tag>Navigation</tag>
       </tags>
   </entry>
 </search>
