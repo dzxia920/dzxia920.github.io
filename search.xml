@@ -565,6 +565,12 @@
 <p><img src="/images/git%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%802.png"></p>
 <p>如果要回到最新版本，只需<code>git reset --hard ID</code>就可以了，这里的ID是最新版本的ID</p>
 <p>如果忘记了最新版本的ID，可以使用<code>git relog</code>来查看</p>
+<h2 id="比较分支"><a href="#比较分支" class="headerlink" title="比较分支"></a>比较分支</h2><p>利用Github上的Compare页面，我们可以很方便的比较两个分支的差异，具体做法为：在浏览器地址栏输入：</p>
+<p><code>https://github.com/dzxia920/Calf-INS/compare/2489d10..19fed71</code></p>
+<p>其格式为：</p>
+<p><code>https://github.com/用户名/仓库名/compare/分支1..分支2</code></p>
+<p>参考：</p>
+<p><a href="https://docs.github.com/zh/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits">https://docs.github.com/zh/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
