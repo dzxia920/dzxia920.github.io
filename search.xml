@@ -545,8 +545,12 @@
 <span id="more"></span>
 
 <h2 id="为什么要使用Git"><a href="#为什么要使用Git" class="headerlink" title="为什么要使用Git"></a>为什么要使用Git</h2><p>当你的代码改动时，你不想每次都去做注释，或者说每次要手动复制文件夹备份一下，这样很麻烦。为了能够写出干净的代码，不要的东西就大胆删去，有了Git完全就可以这样做。</p>
-<h2 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a>总体流程</h2><p>首先需要创建一个仓库。。。。【TODO，下次创建新仓库的时候再写吧】</p>
-<p>其实使用的流程很简单。将每一次备份都添加到一个新分支里，这样也不考虑要合并冲突的问题了。</p>
+<h2 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a>总体流程</h2><h3 id="初始仓库"><a href="#初始仓库" class="headerlink" title="初始仓库"></a>初始仓库</h3><p>首先需要创建一个仓库。。。。【TODO，下次创建新仓库的时候再写吧】，一种是从0开始创建，另一种是对已有的文件夹添加Git版本控制</p>
+<h4 id="从已有文件夹中创建"><a href="#从已有文件夹中创建" class="headerlink" title="从已有文件夹中创建"></a>从已有文件夹中创建</h4><p>切换到该文件夹下，输入<code>$ git init</code>初始化仓库，此时会有默认的<code>master</code>分支</p>
+<p><img src="/git%E4%BB%8E%E5%B7%B2%E6%9C%89%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93.png"></p>
+<p><code>$ git add .</code>和<code>git commit</code>将当前文件夹下的文件添加到仓库，如果有文件不想添加，提前写好<code>.gitignore</code>文件</p>
+<p>这样，本地仓库已经创建好了，如果要添加远程库，首先需要在GitHub上创建一个远程库（不要add readme和许可证），然后通过<code>git remote add origin 远程仓库地址 </code>的方式关联远程库，可以使用<code>$ git remote -v</code>命令查看是否添加了远程库，接下来就可以通过<code>$ git push origin branch-name</code>将本地的分支推送到远程仓库了. 如果需要修改分支名，可以使用<code>$ git branch -M oldname newname</code>。</p>
+<h3 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h3><p>其实使用的流程很简单。将每一次备份都添加到一个新分支里，这样也不考虑要合并冲突的问题了。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看分支</span><br><span class="line">$ git branch</span><br><span class="line">创建新分支</span><br><span class="line">$ git branch (branchname)</span><br><span class="line">转到分支</span><br><span class="line">$ git checkout (branchname)</span><br><span class="line">全部添加</span><br><span class="line">$ git add .</span><br><span class="line">提交修改</span><br><span class="line">$ git commit -m&quot;修改说明&quot;</span><br><span class="line">将更改应用到远程仓库,如果远程没有branchname会新建</span><br><span class="line">$ git push origin (branchname)</span><br></pre></td></tr></table></figure>
 
 <h2 id="Git-ignore文件的编写"><a href="#Git-ignore文件的编写" class="headerlink" title="Git ignore文件的编写"></a>Git ignore文件的编写</h2><p>在你的项目文件夹下，除了代码文件，当然还会有各种各样的数据和结果文件，这就导致整个工程会很大，一般来说，原始数据是不会变的，而结果是可以重新生成的，因此在Git上不会备份原始数据和结果。这就需要去编写ignore文件。<br>步骤分为两步：</p>
@@ -571,6 +575,32 @@
 <p><code>https://github.com/用户名/仓库名/compare/分支1..分支2</code></p>
 <p>参考：</p>
 <p><a href="https://docs.github.com/zh/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits">https://docs.github.com/zh/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits</a></p>
+<h2 id="常用的Git命令"><a href="#常用的Git命令" class="headerlink" title="常用的Git命令"></a>常用的Git命令</h2><ol>
+<li>查看远程库</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git remote [-v | --verbose]</span><br></pre></td></tr></table></figure>
+
+<p><code>git remote</code>会列出每个远程库的简短名字，<code>git remote -v</code>会列出详细信息</p>
+<ol start="2">
+<li>将本地分支推送到远程主机</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如：<code>$ git push origin master</code>表示，将本地的master分支推送到远程origin主机的master分支，如果远程master分支不存在，则会被新建。</p>
+<ol start="3">
+<li>分支操作</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看当前有哪些分支：<code>$ git branch</code></li>
+<li>新建一个<code>dev</code>分支：<code>$ git branch dev</code></li>
+<li>切换到指定的<code>dev</code>分支：<code>$ git checkout dev </code></li>
+<li>查看远程和本地分支：<code>git branch -a</code></li>
+<li>删除远程分支<code>dev</code>：<code>git push origin --delete dev</code></li>
+<li>修改分支dev的名字：<code>git branch -M dev2 version2 </code></li>
+</ul>
+<p>…</p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -578,6 +608,29 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Latex学习记录</title>
+    <url>/2023/01/20/Latex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<!--more 本文介绍了学习Latex的记录。-->
+
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>要使用LaTex，首先需要准备好必备的软件环境。即，我们要在电脑上安装一个 TEX 发行版。现在比较常用的Tex发行版有：</p>
+<ul>
+<li>Tex Live：适用于Windows和Linux，安装体积大</li>
+<li>MacTeX：仅适用于Mac</li>
+<li>MikTeX：适用于所有平台，安装体积小</li>
+</ul>
+<p>所谓 TeX 发行，也叫 TeX 发行版、TeX 系统或者 TeX 套装，指的是包括 TeX 系统的各种可执行程序，以及他们执行时需要的一些辅助程序和宏包文档的集合。</p>
+<p>TeX 的源代码是后缀为 <code>.tex</code> 的纯文本文件。为了便于编辑，我们可以安装一款编辑器。TeXworks是一款专用于编辑TeX的编辑器，在安装TeX Live或MikTeX发行版时，会自带TeXworks编辑器。这里推荐安装TeX Live。</p>
+<h2 id="TeXworks简单使用"><a href="#TeXworks简单使用" class="headerlink" title="TeXworks简单使用"></a>TeXworks简单使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/571658538">https://zhuanlan.zhihu.com/p/571658538</a> LaTeX 快速指南（一）：安装 TeX 发行版</li>
+<li><a href="https://liam.page/texlive/">https://liam.page/texlive/</a> TeX Live 下载及安装说明</li>
+<li><a href="https://liam.page/2014/09/08/latex-introduction/">https://liam.page/2014/09/08/latex-introduction/</a> 一份其实很短的 LaTeX 入门文档</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Latex</tag>
       </tags>
   </entry>
 </search>
