@@ -633,4 +633,60 @@
         <tag>Latex</tag>
       </tags>
   </entry>
+  <entry>
+    <title>INS-Probe配合Ublox小天线的工作流</title>
+    <url>/2023/05/09/INS-Probe%E9%85%8D%E5%90%88Ublox%E5%B0%8F%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
+    <content><![CDATA[<p>这篇博客介绍了使用InsProbe配合Ublox小天线，获取RTK参考值的工作流程</p>
+<span id="more"></span>
+
+<h4 id="1-获取基站观测值文件和导航电文"><a href="#1-获取基站观测值文件和导航电文" class="headerlink" title="1. 获取基站观测值文件和导航电文"></a>1. 获取基站观测值文件和导航电文</h4><h5 id="获取基站原始数据"><a href="#获取基站原始数据" class="headerlink" title="获取基站原始数据"></a>获取基站原始数据</h5><p>基站是17F硬件实验室的Panda接收机，其坐标如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>30.5297649350</th>
+<th>114.3503808494</th>
+<th>100.1529</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>30, 31, 47.153766</td>
+<td>114, 21, 1.371058</td>
+<td>100.1529</td>
+</tr>
+</tbody></table>
+<p>可根据IP进入Panda接收机内部存储，然后拷贝日期的原始观测数据(dat格式)</p>
+<h5 id="原始数据解码"><a href="#原始数据解码" class="headerlink" title="原始数据解码"></a>原始数据解码</h5><p>原始数据可用NovAtel Convert工具进行解码，注意选择<strong>rinex3.02</strong>版本，星座一般只需要GPS+Galileo+BDS</p>
+<p>这样就解码得到了基站的O文件和N文件</p>
+<p><img src="/./images/insprobe-ublox%E5%B7%A5%E4%BD%9C%E6%B5%81-%E5%9F%BA%E7%AB%99%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E8%A7%A3%E7%A0%81.png"></p>
+<h4 id="2-获取流动站观测值文件"><a href="#2-获取流动站观测值文件" class="headerlink" title="2. 获取流动站观测值文件"></a>2. 获取流动站观测值文件</h4><p>流动站，也就是InsProbe得到的gnss文件后缀是.gnss，是UBlox的特定格式，可用rtklib（2.4.3以上版本）中的RTKCONV工具解码：</p>
+<p><img src="/./image/insprobe-ublox-%E6%B5%81%E5%8A%A8%E7%AB%99%E8%A7%A3%E7%A0%81.png"></p>
+<h4 id="3-计算RTK结果"><a href="#3-计算RTK结果" class="headerlink" title="3. 计算RTK结果"></a>3. 计算RTK结果</h4><p>n gps g glonass q qzss h gal</p>
+<p>p是综合的</p>
+]]></content>
+      <tags>
+        <tag>专业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ftp下载IGS广播星历</title>
+    <url>/2023/05/11/ftp%E4%B8%8B%E8%BD%BDIGS%E5%B9%BF%E6%92%AD%E6%98%9F%E5%8E%86/</url>
+    <content><![CDATA[<p>这篇文章介绍了如何用ftp方式下载igs多系统广播星历。</p>
+<span id="more"></span>
+<h4 id="下载IGS广播星历"><a href="#下载IGS广播星历" class="headerlink" title="下载IGS广播星历"></a>下载IGS广播星历</h4><ol>
+<li><code>ftp igs.gnsswhu.cn</code></li>
+<li>匿名登录，用户名<code>anonymous</code>，密码随便输</li>
+<li>虚拟机下需要输入<code>passive</code>命令</li>
+<li>进入<code>\pub\gps\data\daily\</code>目录下，进入对应年份、对应年积日的文件下的<code>23p</code>子目录（年积日可在这里查看：<a href="http://www.igs.gnsswhu.cn/index.php/home/data_product/igs.html%EF%BC%8Cp%E6%84%8F%E5%91%B3%E7%9D%80%E6%98%AF%E5%A4%9A%E7%B3%BB%E7%BB%9F%EF%BC%89">http://www.igs.gnsswhu.cn/index.php/home/data_product/igs.html，p意味着是多系统）</a></li>
+<li><code>ls BRDM*</code>找到对应的多系统广播星历文件</li>
+<li><code>get [BRDM文件名]</code>下载该广播星历</li>
+<li>退出<code>bye</code></li>
+<li>最后需要改下后缀为P才能在rtklib下使用</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
 </search>
