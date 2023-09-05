@@ -38,50 +38,17 @@
 <li>基站观测值若太长了，可以手动截取需要的一部分</li>
 </ul>
 <p><img src="/./image/rtklib_explorer.png"></p>
-<p>n gps g glonass q qzss h gal</p>
+<p>星历后缀：</p>
+<p>n gps </p>
+<p>g glonass </p>
+<p>q qzss </p>
+<p>h GEO</p>
+<p>L galileo</p>
+<p>F BDS</p>
 <p>p是综合的</p>
 ]]></content>
       <tags>
         <tag>专业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java核心技术卷1-Chap1-Java程序设计概述</title>
-    <url>/2022/06/12/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap1-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<p>本文是Java核心技术卷1-第一章-Java程序设计概述的读书笔记。</p>
-<span id="more"></span>
-
-<h2 id="1-1-Java程序设计平台"><a href="#1-1-Java程序设计平台" class="headerlink" title="1.1 Java程序设计平台"></a>1.1 Java程序设计平台</h2><p>Java是功能齐全的出色语言，是一个高质量的执行环境，还提供了一个庞大的库。因此Java是一个完整的平台。</p>
-<h2 id="1-2-Java“白皮书”关键术语"><a href="#1-2-Java“白皮书”关键术语" class="headerlink" title="1.2 Java“白皮书”关键术语"></a>1.2 Java“白皮书”关键术语</h2><ol>
-<li><strong>简单性</strong>。Java语法是C++语法的纯净版本，没有头文件、指针运算、结构、联合、操作符重载、虚基类等。设计Java时使其尽可能接近C++，但是剔除了许多很少使用、难以理解、容易混淆的特性。</li>
-<li><strong>面向对象</strong>。多重继承Java中采取的是更简单的接口。此外，提供了更丰富的运行时自省功能。</li>
-<li><strong>分布式</strong>。Java有一个丰富的例程库，用于处理像HTTP和FTP之类的TCP&#x2F;IP协议。</li>
-<li><strong>健壮性</strong>。Java采用的指针模型可以消除重写内存和损坏数据的可能性。</li>
-<li><strong>安全性</strong>。Java可以构建防病毒、防篡改的系统。</li>
-<li><strong>体系结构中立</strong>。编译器会生成一个目标文件格式，此格式与平台无关，只要有Java运行时系统就可以解释执行，此字节码还可以转成本地机器代码。</li>
-<li><strong>可移植性</strong>。Java基本数据类型的大小和有关运算的行为都有明确的说明，比如int永远是32位。在Java中，数值类型有固定的字节数，二进制数据以固定的格式进行存储和传输（消除了字节顺序的困扰），字符串则采用标准的Unicode格式存储。</li>
-<li><strong>解释型</strong>。Java解释器可以在任何移植了解释器的机器上执行Java字节码。</li>
-<li><strong>高性能</strong>。解释后的字节码性能还不错。即时编译器也会优化代码。</li>
-<li><strong>多线程</strong>。Java可以很好的管理并发程序设计。</li>
-<li><strong>动态性</strong>。动态语言？不太理解。</li>
-</ol>
-<h2 id="1-3-Java-applet与Internet"><a href="#1-3-Java-applet与Internet" class="headerlink" title="1.3 Java applet与Internet"></a>1.3 Java applet与Internet</h2><p>Java applet的想法是：用户从Internet上下载Java字节码，并在自己的机器上运行。在网页中运行的Java程序称为applet。要使用applet，只需要一个启动了Java的web浏览器，它来执行字节码，不需要安装任何软件。但是这种想法因为版本不同、浏览器限制、安全问题等泡汤了。</p>
-<h2 id="1-4-发展简史"><a href="#1-4-发展简史" class="headerlink" title="1.4 发展简史"></a>1.4 发展简史</h2><p>创始人是Sun公司的<strong>Patrick Naughton</strong>和<strong>James Gosling</strong>。</p>
-<p>Java语言的演进：</p>
-<p>目前用的最多的是Java8，2017年发布了Java9.</p>
-<p>参考这篇文章</p>
-<p><a href="https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf">https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf</a></p>
-<h2 id="1-5-关于Java常见的误解和解释"><a href="#1-5-关于Java常见的误解和解释" class="headerlink" title="1.5 关于Java常见的误解和解释"></a>1.5 关于Java常见的误解和解释</h2><p>误解：Java是解释型型的，因此对于关键的应用程序速度太慢了。</p>
-<p>解释：早期Java是解释型的，现在Java虚拟机使用了即时编译器。因此采用Java编写的<strong>热点代码</strong>（对于程序来说，通常只有一部分代码会被经常执行，而应用的性能主要取决于这些代码执行得有多快。这些关键代码段被称为应用的热点代码）速度和C++相差无几，甚至更快。</p>
-]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-        <tag>Coding</tag>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -253,29 +220,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Latex学习记录</title>
-    <url>/2023/01/20/Latex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<!--more 本文介绍了学习Latex的记录。-->
-
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>要使用LaTex，首先需要准备好必备的软件环境。即，我们要在电脑上安装一个 TEX 发行版。现在比较常用的Tex发行版有：</p>
-<ul>
-<li>Tex Live：适用于Windows和Linux，安装体积大</li>
-<li>MacTeX：仅适用于Mac</li>
-<li>MikTeX：适用于所有平台，安装体积小</li>
-</ul>
-<p>所谓 TeX 发行，也叫 TeX 发行版、TeX 系统或者 TeX 套装，指的是包括 TeX 系统的各种可执行程序，以及他们执行时需要的一些辅助程序和宏包文档的集合。</p>
-<p>TeX 的源代码是后缀为 <code>.tex</code> 的纯文本文件。为了便于编辑，我们可以安装一款编辑器。TeXworks是一款专用于编辑TeX的编辑器，在安装TeX Live或MikTeX发行版时，会自带TeXworks编辑器。这里推荐安装TeX Live。</p>
-<h2 id="TeXworks简单使用"><a href="#TeXworks简单使用" class="headerlink" title="TeXworks简单使用"></a>TeXworks简单使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/571658538">https://zhuanlan.zhihu.com/p/571658538</a> LaTeX 快速指南（一）：安装 TeX 发行版</li>
-<li><a href="https://liam.page/texlive/">https://liam.page/texlive/</a> TeX Live 下载及安装说明</li>
-<li><a href="https://liam.page/2014/09/08/latex-introduction/">https://liam.page/2014/09/08/latex-introduction/</a> 一份其实很短的 LaTeX 入门文档</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java核心技术卷1-Chap2-Java程序设计环境</title>
     <url>/2022/06/14/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap2-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<p>本文是Java核心技术卷1-第二章-Java程序设计环境的读书笔记。</p>
@@ -365,6 +309,45 @@
       </tags>
   </entry>
   <entry>
+    <title>Java核心技术卷1-Chap1-Java程序设计概述</title>
+    <url>/2022/06/12/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap1-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<p>本文是Java核心技术卷1-第一章-Java程序设计概述的读书笔记。</p>
+<span id="more"></span>
+
+<h2 id="1-1-Java程序设计平台"><a href="#1-1-Java程序设计平台" class="headerlink" title="1.1 Java程序设计平台"></a>1.1 Java程序设计平台</h2><p>Java是功能齐全的出色语言，是一个高质量的执行环境，还提供了一个庞大的库。因此Java是一个完整的平台。</p>
+<h2 id="1-2-Java“白皮书”关键术语"><a href="#1-2-Java“白皮书”关键术语" class="headerlink" title="1.2 Java“白皮书”关键术语"></a>1.2 Java“白皮书”关键术语</h2><ol>
+<li><strong>简单性</strong>。Java语法是C++语法的纯净版本，没有头文件、指针运算、结构、联合、操作符重载、虚基类等。设计Java时使其尽可能接近C++，但是剔除了许多很少使用、难以理解、容易混淆的特性。</li>
+<li><strong>面向对象</strong>。多重继承Java中采取的是更简单的接口。此外，提供了更丰富的运行时自省功能。</li>
+<li><strong>分布式</strong>。Java有一个丰富的例程库，用于处理像HTTP和FTP之类的TCP&#x2F;IP协议。</li>
+<li><strong>健壮性</strong>。Java采用的指针模型可以消除重写内存和损坏数据的可能性。</li>
+<li><strong>安全性</strong>。Java可以构建防病毒、防篡改的系统。</li>
+<li><strong>体系结构中立</strong>。编译器会生成一个目标文件格式，此格式与平台无关，只要有Java运行时系统就可以解释执行，此字节码还可以转成本地机器代码。</li>
+<li><strong>可移植性</strong>。Java基本数据类型的大小和有关运算的行为都有明确的说明，比如int永远是32位。在Java中，数值类型有固定的字节数，二进制数据以固定的格式进行存储和传输（消除了字节顺序的困扰），字符串则采用标准的Unicode格式存储。</li>
+<li><strong>解释型</strong>。Java解释器可以在任何移植了解释器的机器上执行Java字节码。</li>
+<li><strong>高性能</strong>。解释后的字节码性能还不错。即时编译器也会优化代码。</li>
+<li><strong>多线程</strong>。Java可以很好的管理并发程序设计。</li>
+<li><strong>动态性</strong>。动态语言？不太理解。</li>
+</ol>
+<h2 id="1-3-Java-applet与Internet"><a href="#1-3-Java-applet与Internet" class="headerlink" title="1.3 Java applet与Internet"></a>1.3 Java applet与Internet</h2><p>Java applet的想法是：用户从Internet上下载Java字节码，并在自己的机器上运行。在网页中运行的Java程序称为applet。要使用applet，只需要一个启动了Java的web浏览器，它来执行字节码，不需要安装任何软件。但是这种想法因为版本不同、浏览器限制、安全问题等泡汤了。</p>
+<h2 id="1-4-发展简史"><a href="#1-4-发展简史" class="headerlink" title="1.4 发展简史"></a>1.4 发展简史</h2><p>创始人是Sun公司的<strong>Patrick Naughton</strong>和<strong>James Gosling</strong>。</p>
+<p>Java语言的演进：</p>
+<p>目前用的最多的是Java8，2017年发布了Java9.</p>
+<p>参考这篇文章</p>
+<p><a href="https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf">https://www.jinxuliang.com/course/Java/5_JavaHistory/PPT.pdf</a></p>
+<h2 id="1-5-关于Java常见的误解和解释"><a href="#1-5-关于Java常见的误解和解释" class="headerlink" title="1.5 关于Java常见的误解和解释"></a>1.5 关于Java常见的误解和解释</h2><p>误解：Java是解释型型的，因此对于关键的应用程序速度太慢了。</p>
+<p>解释：早期Java是解释型的，现在Java虚拟机使用了即时编译器。因此采用Java编写的<strong>热点代码</strong>（对于程序来说，通常只有一部分代码会被经常执行，而应用的性能主要取决于这些代码执行得有多快。这些关键代码段被称为应用的热点代码）速度和C++相差无几，甚至更快。</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>Coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MATLAB绘图窗口最大化</title>
     <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
     <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
@@ -382,6 +365,29 @@
       <tags>
         <tag>MATLAB</tag>
         <tag>小技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Latex学习记录</title>
+    <url>/2023/01/20/Latex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<!--more 本文介绍了学习Latex的记录。-->
+
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>要使用LaTex，首先需要准备好必备的软件环境。即，我们要在电脑上安装一个 TEX 发行版。现在比较常用的Tex发行版有：</p>
+<ul>
+<li>Tex Live：适用于Windows和Linux，安装体积大</li>
+<li>MacTeX：仅适用于Mac</li>
+<li>MikTeX：适用于所有平台，安装体积小</li>
+</ul>
+<p>所谓 TeX 发行，也叫 TeX 发行版、TeX 系统或者 TeX 套装，指的是包括 TeX 系统的各种可执行程序，以及他们执行时需要的一些辅助程序和宏包文档的集合。</p>
+<p>TeX 的源代码是后缀为 <code>.tex</code> 的纯文本文件。为了便于编辑，我们可以安装一款编辑器。TeXworks是一款专用于编辑TeX的编辑器，在安装TeX Live或MikTeX发行版时，会自带TeXworks编辑器。这里推荐安装TeX Live。</p>
+<h2 id="TeXworks简单使用"><a href="#TeXworks简单使用" class="headerlink" title="TeXworks简单使用"></a>TeXworks简单使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/571658538">https://zhuanlan.zhihu.com/p/571658538</a> LaTeX 快速指南（一）：安装 TeX 发行版</li>
+<li><a href="https://liam.page/texlive/">https://liam.page/texlive/</a> TeX Live 下载及安装说明</li>
+<li><a href="https://liam.page/2014/09/08/latex-introduction/">https://liam.page/2014/09/08/latex-introduction/</a> 一份其实很短的 LaTeX 入门文档</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Latex</tag>
       </tags>
   </entry>
   <entry>
@@ -474,34 +480,6 @@
       </categories>
       <tags>
         <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
-    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
-    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
-<span id="more"></span>
-<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
-<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
-<p>现将其总结如下：</p>
-<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
-<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
-<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
-<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
-<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
-<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
-<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
-<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
-<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
-<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
-]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>Coding</tag>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -696,6 +674,34 @@
       </categories>
       <tags>
         <tag>Blog Writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
+    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
+<span id="more"></span>
+<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
+<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
+<p>现将其总结如下：</p>
+<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
+<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
+<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
+<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
+<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
+<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
+<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
+<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
+<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
+<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Coding</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
 </search>
