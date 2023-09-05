@@ -259,29 +259,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Latex学习记录</title>
-    <url>/2023/01/20/Latex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<!--more 本文介绍了学习Latex的记录。-->
-
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>要使用LaTex，首先需要准备好必备的软件环境。即，我们要在电脑上安装一个 TEX 发行版。现在比较常用的Tex发行版有：</p>
-<ul>
-<li>Tex Live：适用于Windows和Linux，安装体积大</li>
-<li>MacTeX：仅适用于Mac</li>
-<li>MikTeX：适用于所有平台，安装体积小</li>
-</ul>
-<p>所谓 TeX 发行，也叫 TeX 发行版、TeX 系统或者 TeX 套装，指的是包括 TeX 系统的各种可执行程序，以及他们执行时需要的一些辅助程序和宏包文档的集合。</p>
-<p>TeX 的源代码是后缀为 <code>.tex</code> 的纯文本文件。为了便于编辑，我们可以安装一款编辑器。TeXworks是一款专用于编辑TeX的编辑器，在安装TeX Live或MikTeX发行版时，会自带TeXworks编辑器。这里推荐安装TeX Live。</p>
-<h2 id="TeXworks简单使用"><a href="#TeXworks简单使用" class="headerlink" title="TeXworks简单使用"></a>TeXworks简单使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/571658538">https://zhuanlan.zhihu.com/p/571658538</a> LaTeX 快速指南（一）：安装 TeX 发行版</li>
-<li><a href="https://liam.page/texlive/">https://liam.page/texlive/</a> TeX Live 下载及安装说明</li>
-<li><a href="https://liam.page/2014/09/08/latex-introduction/">https://liam.page/2014/09/08/latex-introduction/</a> 一份其实很短的 LaTeX 入门文档</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java核心技术卷1-Chap2-Java程序设计环境</title>
     <url>/2022/06/14/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B71-Chap2-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<p>本文是Java核心技术卷1-第二章-Java程序设计环境的读书笔记。</p>
@@ -371,23 +348,26 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB绘图窗口最大化</title>
-    <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
-    <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">set(gcf, <span class="string">&quot;Position&quot;</span>, get(<span class="number">0</span>,<span class="string">&#x27;ScreenSize&#x27;</span>))</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
+    <title>Latex学习记录</title>
+    <url>/2023/01/20/Latex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<!--more 本文介绍了学习Latex的记录。-->
 
-<p>此时保存的图像也是放大后的。如：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">saveas(gcf, <span class="string">&#x27;TrajPics.tiff&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>要使用LaTex，首先需要准备好必备的软件环境。即，我们要在电脑上安装一个 TEX 发行版。现在比较常用的Tex发行版有：</p>
+<ul>
+<li>Tex Live：适用于Windows和Linux，安装体积大</li>
+<li>MacTeX：仅适用于Mac</li>
+<li>MikTeX：适用于所有平台，安装体积小</li>
+</ul>
+<p>所谓 TeX 发行，也叫 TeX 发行版、TeX 系统或者 TeX 套装，指的是包括 TeX 系统的各种可执行程序，以及他们执行时需要的一些辅助程序和宏包文档的集合。</p>
+<p>TeX 的源代码是后缀为 <code>.tex</code> 的纯文本文件。为了便于编辑，我们可以安装一款编辑器。TeXworks是一款专用于编辑TeX的编辑器，在安装TeX Live或MikTeX发行版时，会自带TeXworks编辑器。这里推荐安装TeX Live。</p>
+<h2 id="TeXworks简单使用"><a href="#TeXworks简单使用" class="headerlink" title="TeXworks简单使用"></a>TeXworks简单使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/571658538">https://zhuanlan.zhihu.com/p/571658538</a> LaTeX 快速指南（一）：安装 TeX 发行版</li>
+<li><a href="https://liam.page/texlive/">https://liam.page/texlive/</a> TeX Live 下载及安装说明</li>
+<li><a href="https://liam.page/2014/09/08/latex-introduction/">https://liam.page/2014/09/08/latex-introduction/</a> 一份其实很短的 LaTeX 入门文档</li>
+</ol>
 ]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>MATLAB</category>
-      </categories>
       <tags>
-        <tag>MATLAB</tag>
-        <tag>小技巧</tag>
+        <tag>Latex</tag>
       </tags>
   </entry>
   <entry>
@@ -408,6 +388,26 @@
 ]]></content>
       <tags>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB绘图窗口最大化</title>
+    <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
+    <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">set(gcf, <span class="string">&quot;Position&quot;</span>, get(<span class="number">0</span>,<span class="string">&#x27;ScreenSize&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<p>此时保存的图像也是放大后的。如：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">saveas(gcf, <span class="string">&#x27;TrajPics.tiff&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+        <tag>小技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -480,34 +480,6 @@
       </categories>
       <tags>
         <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
-    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
-    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
-<span id="more"></span>
-<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
-<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
-<p>现将其总结如下：</p>
-<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
-<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
-<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
-<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
-<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
-<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
-<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
-<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
-<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
-<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
-]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>Coding</tag>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -702,6 +674,34 @@
       </categories>
       <tags>
         <tag>Blog Writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
+    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
+<span id="more"></span>
+<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
+<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
+<p>现将其总结如下：</p>
+<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
+<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
+<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
+<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
+<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
+<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
+<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
+<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
+<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
+<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Coding</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
 </search>
