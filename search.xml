@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Github Page和域名解绑</title>
+    <url>/2023/09/06/Github%20Page%E5%92%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E7%BB%91/</url>
+    <content><![CDATA[<p>问题描述：当域名过期后，通过username.github.io访问Github Pages会自动跳转到原过期域名，从而无法访问</p>
+<p>个人解决方法：此时需要实现Github Pages和域名解绑，解绑方式许多博客已经说过，核心就是要删除CNAME，然而，使用这种方法还是会跳转，后面发现是因为配置了Hexo，需要删除掉hexo目录下的<code>source\CNAME</code>文件后再提交，才能删除掉CNAME。接下来再清楚浏览器缓存应该就可以正常访问github Page了</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>博客写作</category>
+      </categories>
+  </entry>
+  <entry>
     <title>INS-Probe配合Ublox小天线的工作流</title>
     <url>/2023/05/09/INS-Probe%E9%85%8D%E5%90%88Ublox%E5%B0%8F%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
     <content><![CDATA[<p>这篇博客介绍了使用InsProbe配合Ublox小天线，获取RTK参考值的工作流程</p>
@@ -371,6 +382,26 @@
       </tags>
   </entry>
   <entry>
+    <title>MATLAB绘图窗口最大化</title>
+    <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
+    <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">set(gcf, <span class="string">&quot;Position&quot;</span>, get(<span class="number">0</span>,<span class="string">&#x27;ScreenSize&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<p>此时保存的图像也是放大后的。如：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">saveas(gcf, <span class="string">&#x27;TrajPics.tiff&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+        <tag>小技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git个人使用小结</title>
     <url>/2022/08/06/git%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</url>
     <content><![CDATA[<p>这是在使用Git时的一些感触和小结。</p>
@@ -443,26 +474,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB绘图窗口最大化</title>
-    <url>/2022/06/07/MATLAB%E7%BB%98%E5%9B%BE%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%8C%96/</url>
-    <content><![CDATA[<p>MATLAB中figure窗口一般都是以默认大小显示的，若要将其最大化显示，可以这样做：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">set(gcf, <span class="string">&quot;Position&quot;</span>, get(<span class="number">0</span>,<span class="string">&#x27;ScreenSize&#x27;</span>))</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<p>此时保存的图像也是放大后的。如：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">saveas(gcf, <span class="string">&#x27;TrajPics.tiff&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-        <tag>小技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ftp下载IGS广播星历</title>
     <url>/2023/05/11/ftp%E4%B8%8B%E8%BD%BDIGS%E5%B9%BF%E6%92%AD%E6%98%9F%E5%8E%86/</url>
     <content><![CDATA[<p>这篇文章介绍了如何用ftp方式下载igs多系统广播星历。</p>
@@ -483,31 +494,19 @@
       </tags>
   </entry>
   <entry>
-    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
-    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
-    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
+    <title>专业问题记录</title>
+    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
 <span id="more"></span>
-<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
-<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
-<p>现将其总结如下：</p>
-<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
-<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
-<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
-<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
-<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
-<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
-<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
-<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
-<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
-<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
+
+<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
 ]]></content>
       <categories>
-        <category>Coding</category>
-        <category>Android</category>
+        <category>记录</category>
+        <category>Navigation</category>
       </categories>
       <tags>
-        <tag>Coding</tag>
-        <tag>Android</tag>
+        <tag>Navigation</tag>
       </tags>
   </entry>
   <entry>
@@ -689,19 +688,31 @@
       </tags>
   </entry>
   <entry>
-    <title>专业问题记录</title>
-    <url>/2022/05/16/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>本文介绍了本人关于导航专业的一些待解决或已解决问题的记录。</p>
+    <title>低功耗蓝牙(BLE)安卓开发攻略</title>
+    <url>/2022/07/05/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%93%9D%E7%89%99-BLE-%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>本文是Android中关于低功耗蓝牙(BLE)开发的指南。</p>
 <span id="more"></span>
-
-<h1 id="【TO-FIX】Q1：组合导航中姿态误差的补偿方式"><a href="#【TO-FIX】Q1：组合导航中姿态误差的补偿方式" class="headerlink" title="【TO FIX】Q1：组合导航中姿态误差的补偿方式"></a>【TO FIX】Q1：组合导航中姿态误差的补偿方式</h1><p><img src="/images/%E5%A7%BF%E6%80%81%E8%A1%A5%E5%81%BF%E6%96%B9%E5%BC%8F.png"><br>目前知道的是两种姿态误差扰动的方式是没有区别的，但是补偿时应该用的是上面一种。</p>
+<p>在网上找到了一篇写的很好的Android BLE开发攻略，原文地址如下：</p>
+<blockquote><footer><strong>Chee Yi Ong, punchthrough</strong><cite><a href="https://punchthrough.com/android-ble-guide/">The Ultimate Guide to Android Bluetooth Low Energy</a></cite></footer></blockquote>
+<p>现将其总结如下：</p>
+<p>低功耗蓝牙(Bluetooth Lower Energy, BLE)顾名思义，其功耗非常低，同时也具有和其他设备通信的功能，因此在安卓app上受到越来越多人的青睐。在本文中，我们将重温安卓开发者必知的BLE基础概念，同时也将展示一些简单的示例：Android上BLE的扫描、连接、读写、设置指示或通知。大多数代码是用Kotlin写的，但也能很好地转换成Java。示例app完整的实现可见Github开源仓库。</p>
+<h1 id="BLE基础"><a href="#BLE基础" class="headerlink" title="BLE基础"></a>BLE基础</h1><h2 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h2><p>BLE：BLuetooth Low Energy，是2.4G蓝牙无线技术的一个子集，专门为连接的设备提供低功耗且通常不频繁的数据传输。</p>
+<p>Central&#x2F;Client：能够扫描和连接BLE外围设备以执行某些操作的设备，在app开发中，一般指的是安卓设备。</p>
+<p>Peripheral&#x2F;Server：能够广播BLE信号的设备，通过连接Central以完成某项任务。在app开发中，这通常是正在使用的BLE设备，比如心率监视器。</p>
+<p>GATT Service：描述设备特性的一组characteristics（数据字段），例如设备信息的Service可以包含描述设备序列号的characteristic，以及描述设备电池电量的characteristic。</p>
+<p>GATT Characteristic：包含有意义数据的实体，通常能够从中读取或写入，例如序列号字符串的characteristic。</p>
+<p>GATT Descriptor：一个已定义的属性，描述他所附属的characteristic，例如，the Client Characteristic Configuration descriptor描述了the central当前是否订阅了一个characteristic的值的改变。</p>
+<p>Notifications：当外围设备的characteristic值发生改变的时候，外围设备通知Central的一种方法。Central不需要确认它已经收到了数据包。</p>
+<p>Indications：和Notification一样，但它的每个数据包都被Central确认。这样保证了他们的交付以吞吐量为代价。</p>
+<p>UUID：通用的唯一的标识符，128位数字，用于标识services、characteristics和descriptors。</p>
 ]]></content>
       <categories>
-        <category>记录</category>
-        <category>Navigation</category>
+        <category>Coding</category>
+        <category>Android</category>
       </categories>
       <tags>
-        <tag>Navigation</tag>
+        <tag>Coding</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
 </search>
