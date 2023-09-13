@@ -775,4 +775,28 @@
         <tag>Blog Writing</tag>
       </tags>
   </entry>
+  <entry>
+    <title>MATLAB批量复制或移动文件</title>
+    <url>/2023/09/13/MATLAB%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%88%96%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>本文介绍了在MATLAB中利用<code>movefile</code>或<code>copyfile</code>结合<code>fullfile</code>，<strong>使用通配符</strong>批量移动或拷贝文件的操作</p>
+<span id="more"></span>
+
+<p>假设文件目录结构如下：</p>
+<p>在<code>E:\data\2023-08-09-直线100m航向对齐数据\04_res\</code>有8个case，以第一个case为例，下有子文件夹：</p>
+<ul>
+<li><p><code>E:\data\2023-08-09-直线100m航向对齐数据\04_res\case1\first_pva\</code></p>
+</li>
+<li><p><code>E:\data\2023-08-09-直线100m航向对齐数据\04_res\case1\second_pva\</code></p>
+</li>
+</ul>
+<p>现需要将<code>first_pva</code>文件夹下的<code>INS_imuLeftFoot.txt</code>和<code>INS_imuRightFoot.txt</code>移动到<code>second_pva</code>文件夹下，可使用下面的命令：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> icase = <span class="number">1</span>:<span class="number">8</span></span><br><span class="line">	caseFolder = [<span class="string">&#x27;E:\data\2023-08-09-直线100m航向对齐数据\04_res&#x27;</span>, <span class="string">&#x27;case&#x27;</span>, num2str(icase)];</span><br><span class="line">	copyfile(fullfile(caseFolder, <span class="string">&#x27;first_pva&#x27;</span>,<span class="string">&#x27;INS_imu*Foot.txt&#x27;</span>), fullfile(caseFolder, <span class="string">&#x27;second_pva&#x27;</span>));</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>编程</category>
+        <category>MATLAB</category>
+      </categories>
+  </entry>
 </search>
