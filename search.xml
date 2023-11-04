@@ -839,4 +839,20 @@
         <category>专业</category>
       </categories>
   </entry>
+  <entry>
+    <title>小模块存储卡要求</title>
+    <url>/2023/11/04/%E5%B0%8F%E6%A8%A1%E5%9D%97%E5%AD%98%E5%82%A8%E5%8D%A1%E8%A6%81%E6%B1%82/</url>
+    <content><![CDATA[<p>本文介绍了小模块存储卡选择的一些要求。</p>
+<span id="more"></span>
+
+<p>在这次更换了Netac朗科64G的存储卡后，发现了不适配的问题，特此记录：</p>
+<ol>
+<li>模块存储卡最好写入速度能到20MB&#x2F;s，这次换的写入速度在30~40MB&#x2F;s，但64G存储卡默认文件系统是exFAT，小模块要求文件系统为FAT32，32KB。尝试其他文件系统均写入失败。解决办法：使用DiskGenius重新格式化SD卡。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>专业</category>
+      </categories>
+  </entry>
 </search>
