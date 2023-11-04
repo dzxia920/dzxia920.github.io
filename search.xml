@@ -799,4 +799,44 @@
         <category>MATLAB</category>
       </categories>
   </entry>
+  <entry>
+    <title>使用JLINK烧录模块流程</title>
+    <url>/2023/11/04/%E4%BD%BF%E7%94%A8JLINK%E7%83%A7%E5%BD%95%E6%A8%A1%E5%9D%97%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<p>本文介绍了使用JLINK配合Keil烧录硬件模块的流程</p>
+<span id="more"></span>
+<h1 id="使用JLINK烧录模块流程"><a href="#使用JLINK烧录模块流程" class="headerlink" title="使用JLINK烧录模块流程"></a>使用JLINK烧录模块流程</h1><ol>
+<li>将JLINK连接模块，注意口的方向。<strong>将模块开机</strong>；</li>
+<li>打开Keil，点击<code>Options for Target</code>，使用JLINK，配置如下：</li>
+</ol>
+<p><img src="/images/JLINK%E7%83%A7%E5%BD%951.png"></p>
+<ol start="3">
+<li>点击<code>Settings</code>，观察是否连接成功，连接成功后右侧<code>SW Device</code>会有显示：</li>
+</ol>
+<p><img src="/images/JLINK%E7%83%A7%E5%BD%952.png"></p>
+<ol start="4">
+<li>先<code>Rebuild</code>生成，然后<code>Load</code>将代码烧入模块内。<code>Load</code>时下方状态栏会有进度条：</li>
+</ol>
+<p><img src="/images/JLINK%E7%83%A7%E5%BD%953.png"></p>
+<p><img src="/images/JLINK%E7%83%A7%E5%BD%954.png"></p>
+<p>整体界面如下：</p>
+<p><img src="/images/JLINK%E7%83%A7%E5%BD%955.png"></p>
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>专业</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>平面轨迹对齐推导及代码</title>
+    <url>/2023/10/24/%E5%B9%B3%E9%9D%A2%E8%BD%A8%E8%BF%B9%E5%AF%B9%E9%BD%90%E6%8E%A8%E5%AF%BC%E5%8F%8A%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>这篇文章介绍了平面轨迹对齐的原理和推导，并附上代码。</p>
+<span id="more"></span>
+
+<p>问题引入<br>在评估惯导推算轨迹精度时，需要将惯导轨迹与参考轨迹对齐。<br>$$<br>\begin{split}<br>\begin{bmatrix}  x_{ref} \ y_{ref} \end{bmatrix} &#x3D; &amp;<br>\begin{bmatrix}  l\cdot sin(\psi_{ref}) \ l \cdot cos(\psi_{ref}) \end{bmatrix} &#x3D;<br>\begin{bmatrix}  l\cdot sin(\psi_1 - \Delta \psi) \ l \cdot cos(\psi_1 - \Delta \psi) \end{bmatrix} &#x3D;<br>\begin{bmatrix}  l\cdot(sin\psi_1cos\Delta\psi - cos\psi_1 sin\Delta\psi) \ l\cdot(cos\psi_1cos\Delta\psi + sin\psi_1 sin\Delta\psi) \end{bmatrix}  \ &#x3D; &amp;<br>\begin{bmatrix}  x_1 \cdot cos\Delta\psi - y_1 \cdot sin\Delta\psi \ x_1 \cdot sin\Delta\psi - y_1 \cdot cos\Delta\psi \end{bmatrix} &#x3D;<br>\begin{bmatrix}  cos\Delta\psi &amp; -sin\Delta\psi \ sin\Delta\psi &amp; cos\Delta\psi \end{bmatrix} \begin{bmatrix}  x_1 \ y_1 \end{bmatrix}<br>\end{split}<br>$$</p>
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>专业</category>
+      </categories>
+  </entry>
 </search>
