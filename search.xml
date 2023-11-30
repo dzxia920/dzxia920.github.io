@@ -855,4 +855,26 @@
         <category>专业</category>
       </categories>
   </entry>
+  <entry>
+    <title>rtklib解算部分攻略</title>
+    <url>/2023/11/30/rtklib%E8%A7%A3%E7%AE%97%E9%83%A8%E5%88%86%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>本文介绍了rtklib解算时的一些经验</p>
+<span id="more"></span>
+<ol>
+<li>如果使用RTK，若流动站载波不是很连续，一般用单频，此时用单频的天线也够了</li>
+<li>在解算时可以尝试四大系统的分别组合试试，这个影响很大，尤其当某些系统出问题时</li>
+<li>静态开始可以尝试<code>Static-start</code>模式</li>
+<li>Filter Type可以试试<code>combine</code>和<code>combine and no phase reset</code></li>
+<li>潮汐改正在离海1000km影响只有一两个cm，在相对定位时可以不考虑</li>
+<li>在很短基线情况下，可以不改电离层；若基线高差较大，可以改下对流层，一般用<code>Estimate ZTD</code></li>
+<li>有时RTK固定解比例太少，如果不追求很高精度，也可以尝试伪距差分<code>DGNSS</code></li>
+</ol>
+<p>附：</p>
+<p>合众思壮接收机：Wi-Fi: NET20H3051006L   IP:192.168.10.1 解码用StaticToRinex</p>
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>专业</category>
+      </categories>
+  </entry>
 </search>
