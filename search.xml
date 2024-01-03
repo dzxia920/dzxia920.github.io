@@ -877,4 +877,54 @@
         <category>专业</category>
       </categories>
   </entry>
+  <entry>
+    <title>千寻RTK-SDK添加以及Android开发踩坑经验小结</title>
+    <url>/2024/01/03/%E5%8D%83%E5%AF%BBRTK-SDK%E6%B7%BB%E5%8A%A0%E4%BB%A5%E5%8F%8AAndroid%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C%E5%B0%8F%E7%BB%93/</url>
+    <content><![CDATA[<p>在看巡检APP和导入千寻RTK SDK的过程中，锻炼了Android开发能力。经验总结如下：</p>
+<span id="more"></span>
+
+<h2 id="如何导入千寻SDK"><a href="#如何导入千寻SDK" class="headerlink" title="如何导入千寻SDK"></a>如何导入千寻SDK</h2><h3 id="导入流程"><a href="#导入流程" class="headerlink" title="导入流程"></a>导入流程</h3><p>首先，按照<a href="https://github.com/woncan/BeidouProbe">Github上的demo</a> ，在这个项目中，<strong>Device文件夹是他的库文件</strong>，若以拷贝方式添加，需要导入3个东西：</p>
+<ul>
+<li><strong>Jar包</strong>：将<code>device/lib/</code>文件夹下的Jar包拷贝到自己项目的<code>app/libs</code>文件夹下，</li>
+<li><strong>SO文件</strong>：将<code>device/lib/</code>文件夹下的<code>arm64-v8a</code>和<code>armeabi-v7a</code>拷贝到自己项目的<code>app/libs</code>文件夹下，这两个文件夹包含了SO文件，通过这种方式导入SO文件需要同时修改app模块下的<code>build.gradle</code>文件，具体是在<code>android</code>包下添加<code>sourceSets</code>：</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">android&#123;</span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main &#123;</span><br><span class="line">            jniLibs.srcDirs = [<span class="string">&#x27;libs&#x27;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Dependencies依赖</strong>：千寻RTK-SDK依赖其他的库如串口库，因此还需要导入其他依赖。在app模块下的<code>build.gradle</code>文件的<code>dependencies</code>包下导入下面依赖（参考SDK的依赖）：</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// rtk模块所需依赖</span></span><br><span class="line">    api <span class="string">&#x27;com.github.mik3y:usb-serial-for-android:3.4.6&#x27;</span></span><br><span class="line">    implementation <span class="string">&#x27;com.squareup.okio:okio:3.0.0&#x27;</span></span><br><span class="line">    implementation <span class="string">&quot;com.squareup.okhttp3:okhttp:4.9.3&quot;</span></span><br><span class="line">    implementation <span class="string">&#x27;io.reactivex.rxjava3:rxjava:3.1.0&#x27;</span></span><br><span class="line">    api files(<span class="string">&#x27;libs/device.jar&#x27;</span>)</span><br><span class="line">    implementation files(<span class="string">&#x27;libs/cmcc.jar&#x27;</span>)</span><br><span class="line">    implementation files(<span class="string">&#x27;libs/qx.jar&#x27;</span>)</span><br><span class="line">    implementation files(<span class="string">&#x27;libs/sixents.jar&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="碰到的问题和解决方法"><a href="#碰到的问题和解决方法" class="headerlink" title="碰到的问题和解决方法"></a>碰到的问题和解决方法</h3><h4 id="1-如何导入Jar包、SO文件"><a href="#1-如何导入Jar包、SO文件" class="headerlink" title="1. 如何导入Jar包、SO文件"></a>1. 如何导入Jar包、SO文件</h4><p>这部分对于初学者来说确实很困难，不过找到了<a href="https://blog.csdn.net/yy1300326388/article/details/46422939">一篇总结的很好的博客</a> ，总结了各种导入方式，可以参考该博客学习如何导入。</p>
+<h4 id="2-导入的依赖库报错找不到指定版本"><a href="#2-导入的依赖库报错找不到指定版本" class="headerlink" title="2. 导入的依赖库报错找不到指定版本"></a>2. 导入的依赖库报错找不到指定版本</h4><p>直接搜一下报错的库，找到官网示例的用法，很有可能是一些前置配置没配好，比如在导入**<a href="https://github.com/mik3y/usb-serial-for-android">usb-serial-for-android</a>**这个串口库的时候找不到指定版本，原来是因为需要Add jitpack.io repository to your root build.gradle。按照示例用法加上就解决了问题。</p>
+<h2 id="Android开发踩过的坑和新理解"><a href="#Android开发踩过的坑和新理解" class="headerlink" title="Android开发踩过的坑和新理解"></a>Android开发踩过的坑和新理解</h2><ol>
+<li><p>在拿到新Android Project需要在本地允许时，首先需要检查gradle版本和gradle插件版本，可以将其设置为本地的版本，这样就不用在Sync时重新下新的版本。另外<strong>gradle版本和gradle插件版本要匹配</strong>，另外<strong>Android Studio版本和支持的Gradle插件版本也有对应关系</strong>，具体关系可参考[<a href="https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn%5D">https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn]</a> ，没对上也会报错。其中：</p>
+<ul>
+<li>gradle版本可以在gradle.wrapper.properties文件中查看：<code>distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-bin.zip</code>，表明当前gradle版本为7.0.2</li>
+<li>gradle插件版本在project的build.gradle文件中查看：<code>classpath &quot;com.android.tools.build:gradle:7.0.3&quot;</code>，表明当前gradle插件版本为7.0.3</li>
+<li>Android Studio版本可以在AS-&gt;Help-&gt;About中查看，当前Android Studio版本为2021.1.1 Patch2.</li>
+</ul>
+</li>
+<li><p>从Android10.0（API 29）后，组里常用的在SD卡创建文件夹的方法（<code>Environment.getExternalStorageDirectory()</code>）就会失效。但这种方法很好用，因为在SD卡创建文件后，即使卸载APP，数据仍不会被卸载。使用这种方法创建文件夹保存文件时一定要注意<code>targetSdkVersion&lt;=28</code></p>
+</li>
+<li><p>查看包名、app名称。<code>AndroidManifest.xml</code>文件是安卓程序的详细清单，这里面有包名(<code>package</code>)和名称(<code>name</code>)</p>
+</li>
+<li><p>Android Studio 如何添加和删除 Library Module。添加Lib后不可以直接删除，具体添加和删除流程可参考[<a href="https://blog.csdn.net/zgh0711/article/details/70948532]">https://blog.csdn.net/zgh0711/article/details/70948532]</a>  </p>
+</li>
+<li><p>各SdkVersion的关系：原则为：<code>minSdkVersion &lt;= targetSdkVersion &lt;= compileSdkVersion</code>。其中<code>compileSdkVersion</code>是编译使用的SDK版本，这和本地<code>sdk manager</code>里面下载的<code>sdk platform</code>是对应的。如果没有下载该版本，as会自动下载。</p>
+</li>
+<li><p><code>buildToolsVersion</code>是构建工具的版本，和上面的SdkVersion没有任何关系。<code>buildToolsVersion</code>也是和本地<code>sdk manager</code>里面下载的<code>sdk tools</code>是对应的，如果没有下载该版本，as会自动下载。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工作学习</category>
+        <category>编程</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>专业</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
 </search>
